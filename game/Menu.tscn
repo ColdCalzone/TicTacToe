@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://KA.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Menu.gd" type="Script" id=2]
+
+[node name="Menu" type="CenterContainer"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -159.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fade" type="ColorRect" parent="."]
+margin_right = 448.0
+margin_bottom = 448.0
+rect_min_size = Vector2( 448, 448 )
+color = Color( 0, 0, 0, 0.494118 )
+
+[node name="UI" type="VBoxContainer" parent="."]
+margin_left = 55.0
+margin_top = 98.0
+margin_right = 393.0
+margin_bottom = 349.0
+custom_constants/separation = 59
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelContainer" type="CenterContainer" parent="UI"]
+margin_right = 338.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UI/LabelContainer"]
+margin_top = 32.0
+margin_right = 338.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "YOU SOMETHING'D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonContainer" type="VBoxContainer" parent="UI"]
+margin_top = 159.0
+margin_right = 338.0
+margin_bottom = 251.0
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Res" type="Button" parent="UI/ButtonContainer"]
+margin_right = 338.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 1 )
+text = "Restart"
+
+[node name="Quit" type="Button" parent="UI/ButtonContainer"]
+margin_top = 51.0
+margin_right = 338.0
+margin_bottom = 92.0
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"

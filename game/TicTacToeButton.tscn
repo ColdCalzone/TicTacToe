@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TicTacToeButton.gd" type="Script" id=1]
+
+[node name="Pos" type="TextureButton"]
+margin_right = 140.0
+margin_bottom = 124.0
+rect_min_size = Vector2( 146, 146 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

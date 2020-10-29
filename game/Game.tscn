@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TicTacToeButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/LineV.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/LineH.png" type="Texture" id=5]
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = -1.0
+margin_right = 449.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 450, 450 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridH" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 1.0
+margin_top = 146.0
+margin_right = 449.0
+margin_bottom = 304.0
+mouse_filter = 2
+custom_constants/separation = 150
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/GridH"]
+margin_right = 448.0
+margin_bottom = 4.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/GridH"]
+margin_top = 154.0
+margin_right = 448.0
+margin_bottom = 158.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+
+[node name="GridV" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 146.0
+margin_top = 1.0
+margin_right = 304.0
+margin_bottom = 449.0
+mouse_filter = 2
+custom_constants/separation = 150
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/GridV"]
+margin_right = 4.0
+margin_bottom = 448.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/GridV"]
+margin_left = 154.0
+margin_right = 158.0
+margin_bottom = 448.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+
+[node name="Board" type="GridContainer" parent="CenterContainer"]
+margin_right = 448.0
+margin_bottom = 448.0
+rect_min_size = Vector2( 448, 448 )
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pos1" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_right = 146.0
+margin_bottom = 146.0
+
+[node name="Pos2" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_right = 296.0
+margin_bottom = 146.0
+
+[node name="Pos3" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_left = 300.0
+margin_right = 446.0
+margin_bottom = 146.0
+
+[node name="Pos4" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_top = 150.0
+margin_right = 146.0
+margin_bottom = 296.0
+
+[node name="Pos5" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 150.0
+margin_right = 296.0
+margin_bottom = 296.0
+
+[node name="Pos6" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_left = 300.0
+margin_top = 150.0
+margin_right = 446.0
+margin_bottom = 296.0
+
+[node name="Pos7" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_top = 300.0
+margin_right = 146.0
+margin_bottom = 446.0
+
+[node name="Pos8" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_left = 150.0
+margin_top = 300.0
+margin_right = 296.0
+margin_bottom = 446.0
+
+[node name="Pos9" parent="CenterContainer/Board" instance=ExtResource( 1 )]
+margin_left = 300.0
+margin_top = 300.0
+margin_right = 446.0
+margin_bottom = 446.0
